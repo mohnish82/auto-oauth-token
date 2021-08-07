@@ -1,0 +1,16 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          kc:
+            client-id: temp1
+            client-secret: 1e14022e-d01c-48e3-ae1d-3c81c22f2893
+            authorization-grant-type: client_credentials
+            scope: openid
+        provider:
+          kc:
+            oidc-well-known-uri: http://localhost:8080/auth/realms/temp/.well-known/openid-configuration
+            token-uri: http://localhost:8080/auth/realms/temp/protocol/openid-connect/token
+server:
+  port: 8081
